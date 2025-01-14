@@ -1,32 +1,33 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="asset\css\contact.css">
+    <title>contact form</title>
+    <link rel="stylesheet" href="assets/css/contact.css">
 </head>
-
 <body>
-    <h1>Contact Us</h1>
-    <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email"><br><br>
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone"><br><br>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message"></textarea><br><br>
-        <input type="submit" value="Send">
-    </form>
-
-    <div id="response"></div>
-
-    <script src="asset\js\contact.js"></script>
+    <div class="contact-container">
+        <!-- API Start -->
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+        <!-- API ...  -->
+            <div class="contact-left-title">
+                <h2>Get in touch</h2>
+                <hr>
+            </div>
+            <!-- API Access Key -->
+            <input type="hidden" name="access_key" value="5cbad1e8-a2f8-4bad-a9b9-00291ea43216">
+            <!-- API End -->
+            <input type="text" maxlength="10" pattern="\d{1,10}" name="number" placeholder="Your Number" class="contact-inputs" required>
+            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+            <textarea name="message" placeholder="Your Message" class="contact-inputs" required></textarea>
+            <button type="submit">Submit <img src="assets/arrow_icon.png" alt=""></button>
+        </form>
+        <div class="contact-right">
+            <img src="assets/right_img.png" alt="">
+        </div>
+    </div>
+    
 </body>
-
 </html>
